@@ -1,0 +1,91 @@
+@media screen and (max-width:700px) {
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    right: 0;
+    background: #141414;
+    height: 0px;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+    transition: .4s;
+  }
+  #nav.active #menu {
+    height: calc(100vh - 60px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  #menu a {
+    padding: 1rem 1rem;
+    margin: 1rem 0;   
+    border-bottom: 2px solid rgba(0,0,0,0.5);
+  }
+  #btn-mobile {
+    display: flex;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: .5rem;
+  }
+  #hamburguer {
+    color: white;
+    border-top: 4px solid;
+    width: 30px;
+  }
+  #hamburguer::after,
+  #hamburguer::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
+  }
+  #nav.active #hamburguer {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburguer::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburguer::after {
+    transform: rotate(-135deg);
+    top: -8px;
+  }
+
+
+  .filme-principal {
+    background-position: center;
+  }
+
+  .filme-principal .titulo {
+    font-size: 2rem;
+  }
+
+  .botao {
+    margin-top: 5px;
+    width: 190px;
+    height: 50px;
+ }
+
+ul {
+  display: none;
+}
+
+.mobile-bar {
+  display: flex;
+}
+
+}
+
+@media (min-width:1000px) {
+  .descricao {
+    width: 50%;
+  }
+}
